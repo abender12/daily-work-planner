@@ -20,7 +20,11 @@ $(function () {
     const currentHour = dayjs().hour()
       // const testHour = dayjs().hour(13).hour()
       console.log(currentHour)
-      if (currentHour < 9 || currentHour > 17) return;
+      if (currentHour < 9) {
+        document.querySelectorAll('.time-block').classList.add('future');
+      } else if (currentHour > 17) {
+        document.querySelectorAll('.time-block').classList.add('past');
+      } ;
       switch (currentHour) {
         case 9:
           document.getElementById('hour-9').classList.add('present')
