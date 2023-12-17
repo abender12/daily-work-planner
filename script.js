@@ -18,7 +18,7 @@ $(function () {
     // past, present, and future classes? How can Day.js be used to get the
     // current hour in 24-hour time?
     const currentHour = dayjs().hour()
-      // const testHour = dayjs().hour(9).hour()
+      // const testHour = dayjs().hour(13).hour()
       console.log(currentHour)
       if (currentHour < 9 || currentHour > 17) return;
       switch (currentHour) {
